@@ -1,0 +1,268 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+$mainColor: #5fa8d3;
+$mainColorDark: #1b4965;
+$textColor: #454545;
+$bg-color: #fbfbfb;
+$white: #ffffff;
+$light: #bdbdbd;
+$success: #71d43c;
+$danger: #ed3f3f;
+
+$borderRadius: 4px;
+
+$headerSize: 55px;
+$navbarSize: 230px;
+
+body {
+  font-family: "Roboto", sans-serif, "arial", sans-serif;
+  letter-spacing: 0.8px;
+  color: $textColor;
+
+  a {
+    color: inherit;
+  }
+
+  aside {
+    height: calc(100% - $headerSize);
+  }
+
+  .container {
+    padding: 0 5%;
+  }
+
+  .logo {
+    font-family: "Bebas Neue", cursive;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    color: $mainColorDark;
+  }
+
+  .contents {
+    .section {
+      width: 100%;
+      height: calc(100% - $headerSize);
+      background-color: $bg-color;
+      padding: 30px 10px;
+
+      h2 {
+        font-size: 1.8rem;
+        text-align: center;
+        font-weight: 400;
+        color: $mainColorDark;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: $mainColorDark;
+      }
+
+      h4 {
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: $mainColorDark;
+      }
+
+      .section-title {
+        width: 95%;
+        margin: 0 auto;
+      }
+
+      .section-content {
+        width: 100%;
+        margin-top: 40px;
+      }
+
+      .successMsg {
+        color: $success;
+      }
+
+      .errorMsg {
+        color: $danger;
+      }
+
+      .btn {
+        font-size: 1rem;
+        letter-spacing: 1px;
+        padding: 12px 15px;
+        margin-bottom: 15px;
+        color: $white;
+        background-color: $mainColorDark;
+        border: none;
+        border-radius: $borderRadius;
+        cursor: pointer;
+        transition: background-color 200ms;
+      }
+
+      //-------- CHECKBOX --------
+
+      .checkbox {
+        position: relative;
+        margin-bottom: 20px;
+
+        input {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 55px;
+          height: 1.8rem;
+          opacity: 0;
+        }
+
+        label {
+          display: grid;
+          grid-template-columns: 1fr 55px;
+          grid-template-areas: "label checkbox";
+          gap: 6px;
+        }
+
+        label::before,
+        label::after {
+          grid-area: checkbox;
+          content: "";
+          display: block;
+          font-size: 1.8rem;
+          margin-top: -0.2em;
+        }
+
+        label::before {
+          width: 100%;
+          height: 1em;
+          border: 1px solid $light;
+          border-radius: 1em;
+          transition: background-color 300ms, border-color 300ms;
+        }
+
+        label::after {
+          position: relative;
+          left: 2px;
+          top: 2px;
+          width: calc(1em - 4px);
+          height: calc(1em - 4px);
+          background-color: $light;
+          border-radius: 50%;
+          transition: background-color 300ms, transform 300ms;
+        }
+
+        input:checked + label::before {
+          background-color: $mainColor;
+          border-color: $mainColor;
+        }
+
+        input:checked + label::after {
+          background-color: $white;
+          transform: translateX(1.6rem);
+        }
+
+        @media screen and (min-width: 700px) {
+          input,
+          label {
+            cursor: pointer;
+          }
+        }
+      }
+
+      //-------- MODALS --------
+      .modal {
+        position: fixed;
+        z-index: 90;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+        display: none;
+
+        .modal-content {
+          width: 90%;
+          margin: 20% auto;
+          padding: 20px;
+          border: 1px solid $light;
+          border-radius: $borderRadius;
+          background-color: $white;
+
+          .modal-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+
+            .close-modal {
+              font-size: 1.8rem;
+              cursor: pointer;
+            }
+          }
+
+          .add-modal {
+            display: flex;
+            flex-direction: column;
+
+            label {
+              font-size: 1.1rem;
+              margin-bottom: 10px;
+            }
+            .modal-input {
+              height: 30px;
+              padding-left: 10px;
+              margin-bottom: 30px;
+              border: 1px solid $light;
+              border-radius: $borderRadius;
+              outline: none;
+            }
+          }
+
+          button {
+            font-size: 1.1rem;
+            padding: 10px 15px;
+            color: $white;
+            background-color: $mainColorDark;
+            border: none;
+            border-radius: $borderRadius;
+            cursor: pointer;
+          }
+        }
+      }
+      .modal.active {
+        display: block;
+      }
+
+      @media screen and (min-width: 700px) {
+        .modal {
+          .modal-content {
+            width: 35%;
+            margin: 10% auto;
+
+            .modal-header {
+              .close-modal {
+                font-size: 2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 700px) {
+    .contents {
+      display: flex;
+
+      .btn:hover {
+        background-color: $mainColor;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.header {
+  position: static;
+  top: 0;
+  width: 100%;
+  height: $headerSize;
+  background-color: $mainColor;
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .burger-btn {
+    font-size: 1.6rem;
+  }
+
+  .site-title {
+    display: none;
+  }
+
+  @media screen and (min-width: 700px) {
+    .logo {
+      display: block;
+    }
+
+    .burger-btn {
+      display: none;
+    }
+
+    .site-title {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 1.2rem;
+    }
+  }
+}

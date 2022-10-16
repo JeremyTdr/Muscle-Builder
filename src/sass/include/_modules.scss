@@ -1,0 +1,65 @@
+.modules {
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+
+    .create-module,
+    p {
+      margin-bottom: 20px;
+      align-self: flex-start;
+    }
+
+    .errorMsg {
+      color: $danger;
+    }
+
+    .successMsg {
+      color: $success;
+    }
+
+    .list-item {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 10px;
+      border: 1.5px solid $light;
+      border-radius: $borderRadius;
+      font-size: 1.2rem;
+      background-color: $white;
+      cursor: pointer;
+
+      .status {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .modules {
+    .create-module {
+      cursor: pointer;
+    }
+
+    .create-module:hover {
+      color: $mainColor;
+    }
+
+    .list {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .list-item:hover {
+      border: 1.5px solid $mainColor;
+      transition: 0.3s;
+
+      .name {
+        color: $mainColor;
+        transition: 0.3s;
+      }
+    }
+  }
+}

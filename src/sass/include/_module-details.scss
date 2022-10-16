@@ -1,0 +1,33 @@
+.module-details {
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    margin: 0 auto;
+
+    .list-item {
+      width: 100%;
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .modules {
+    width: 80%;
+    margin: 0 auto;
+
+    .list-item:hover {
+      border: 1.5px solid $mainColor;
+      transition: 0.3s;
+
+      .name {
+        color: $mainColor;
+        transition: 0.3s;
+      }
+    }
+  }
+}

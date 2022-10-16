@@ -1,0 +1,80 @@
+.structure-edit {
+  .edit-structure {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto 30px;
+
+    .edit-structure-label {
+      margin-bottom: 10px;
+    }
+
+    .edit-structure-input {
+      height: 30px;
+      padding-left: 10px;
+      margin-bottom: 28px;
+      border: 1px solid $light;
+      border-radius: $borderRadius;
+      outline: none;
+    }
+
+    .mods-section {
+      background-color: $white;
+      border: 1px solid $light;
+      border-radius: $borderRadius;
+      padding: 5px;
+      font-size: 0.9rem;
+
+      .add-module {
+        cursor: pointer;
+        margin-top: 10px;
+        color: $mainColorDark;
+      }
+
+      .errorMsg,
+      .successMsg {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  button {
+    margin-top: 30px;
+  }
+
+  .modal {
+    .select-module {
+      width: fit-content;
+      height: auto;
+      margin: 0 auto;
+      text-align: center;
+
+      .select-title {
+        margin-bottom: 10px;
+      }
+
+      select {
+        width: 100%;
+        padding: 6px;
+        font-size: 1rem;
+        border: 1px solid $light;
+        border-radius: $borderRadius;
+        outline: none;
+      }
+    }
+  }
+
+  @media screen and (min-width: 700px) {
+    width: 70%;
+
+    .mods-section {
+      .add-module:hover {
+        color: $mainColor;
+      }
+    }
+
+    button {
+      width: fit-content;
+    }
+  }
+}

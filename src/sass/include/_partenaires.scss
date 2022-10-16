@@ -1,0 +1,68 @@
+.partenaires {
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+
+    .create-partner,
+    p {
+      margin-bottom: 20px;
+      align-self: flex-start;
+    }
+
+    .list-item {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 10px;
+      border: 1.5px solid $light;
+      border-radius: $borderRadius;
+      font-size: 1.2rem;
+      background-color: $white;
+      cursor: pointer;
+
+      .status {
+        font-size: 1rem;
+        i {
+          padding-right: 8px;
+        }
+
+        .active {
+          color: $success;
+        }
+
+        .inactive {
+          color: $danger;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .partenaires {
+    .create-partner {
+      cursor: pointer;
+    }
+
+    .create-partner:hover {
+      color: $mainColor;
+    }
+
+    .list {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .list-item:hover {
+      border: 1.5px solid $mainColor;
+      transition: 0.3s;
+
+      .name {
+        color: $mainColor;
+        transition: 0.3s;
+      }
+    }
+  }
+}

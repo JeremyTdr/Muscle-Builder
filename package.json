@@ -1,0 +1,12 @@
+{
+  "name": "muscle-builder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sass ./src/sass/style.scss  ./src/style.css --watch"
+  },
+  "author": "Jeremy Tuder",
+  "license": "ISC"
+}
