@@ -527,6 +527,7 @@ body .contents .section .modal.active {
 .structure-edit .edit-structure .mods-section .add-module {
   cursor: pointer;
   margin-top: 10px;
+  margin-bottom: 26px;
   color: #1b4965;
 }
 .structure-edit .edit-structure .mods-section .errorMsg,

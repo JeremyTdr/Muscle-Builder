@@ -27,11 +27,6 @@
                     <div class="add-module open-modal" id="add-module"><i class="fas fa-plus"></i> Ajouter un module</div>
                     
                     <?php
-                    if(isset($errorMsg)){ echo "<p class='errorMsg'>" . $errorMsg . '</p>'; } 
-                    if(isset($successMsg)){ echo "<p class='successMsg'>".$successMsg.'</p>'; }
-
-                    echo("<br><br>");                    
-                    
                     while($structureMods = $getStructureMods->fetch()){
                     ?>  
                         <div class="checkbox">
