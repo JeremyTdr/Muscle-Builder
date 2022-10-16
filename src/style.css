@@ -204,6 +204,7 @@ body .contents .section .modal.active {
 @media screen and (min-width: 700px) {
   body .contents {
     display: flex;
+    margin-left: 230px;
   }
   body .contents .btn:hover {
     background-color: #5fa8d3;
@@ -270,7 +271,7 @@ body .contents .section .modal.active {
 }
 
 .header {
-  position: static;
+  position: sticky;
   top: 0;
   width: 100%;
   height: 55px;
@@ -359,7 +360,6 @@ body .contents .section .modal.active {
   .nav {
     display: block;
     width: 230px;
-    position: inherit;
   }
   .nav .site-title {
     display: none;

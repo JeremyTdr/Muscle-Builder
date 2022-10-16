@@ -259,6 +259,7 @@ body {
   @media screen and (min-width: 700px) {
     .contents {
       display: flex;
+      margin-left: $navbarSize;
 
       .btn:hover {
         background-color: $mainColor;
