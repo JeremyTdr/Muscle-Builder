@@ -387,7 +387,11 @@ body .contents .section .modal.active {
   background-color: #ffffff;
   cursor: pointer;
 }
+.partenaires .list .list-item .name {
+  width: 100%;
+}
 .partenaires .list .list-item .status {
+  min-width: max-content;
   font-size: 1rem;
 }
 .partenaires .list .list-item .status i {
@@ -589,7 +593,11 @@ body .contents .section .modal.active {
   background-color: #ffffff;
   cursor: pointer;
 }
+.modules .list .list-item .name {
+  width: 100%;
+}
 .modules .list .list-item .status {
+  min-width: max-content;
   font-size: 1.2rem;
 }
 

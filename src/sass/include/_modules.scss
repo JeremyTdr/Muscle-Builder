@@ -30,7 +30,12 @@
       background-color: $white;
       cursor: pointer;
 
+      .name {
+        width: 100%;
+      }
+
       .status {
+        min-width: max-content;
         font-size: 1.2rem;
       }
     }

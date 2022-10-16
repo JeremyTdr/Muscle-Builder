@@ -19,7 +19,7 @@
                   while($partner = $getPartners->fetch()){
                   ?>
                      <li class="list-item">
-                        <div class="name"><a href="partenaire-details.php?id=<?= $partner['id']; ?>"><?= $partner['name']; ?></a></div>
+                        <a class="name" href="partenaire-details.php?id=<?= $partner['id']; ?>"><?= $partner['name']; ?></a>
                         <div class="status">
                         <?php 
                         if($partner['enable'] == 1){ 

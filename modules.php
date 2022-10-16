@@ -18,7 +18,7 @@
                 while($module = $getMods->fetch()){
                 ?>
                     <li class="list-item">
-                        <div class="name"><a href="module-details.php?id=<?= $module['id']; ?>"><?= $module['name']; ?></a></div>
+                        <a class="name" href="module-details.php?id=<?= $module['id']; ?>"><?= $module['name']; ?></a>
                         <div class="status">
                             <?php
                             $getModsCount = $bdd->query('SELECT id_structure FROM structure_mods WHERE id_module = '.$module['id'].'');
