@@ -13,19 +13,18 @@
                 <?php
                 while($structureMods = $getStructureMods->fetch()){
                 ?>
-
+                    <h3><?=$structureMods[5];?></h3>
                     <li class="list-item">
-                        <div class="name"><a href="structure-edit.php?id=<?= $structureMods['id_structure']; ?>"><?= $structureMods['name']; ?></a></div>
+                        <a class="name" href="structure-edit.php?id=<?= $structureMods['id_structure']; ?>"><?= $structureMods['name']; ?></a>
                         <div class="status">
                         <?php 
                         if($structureMods['status'] == 1){ 
-                           echo "<i class='fas fa-circle active'></i> $structureMods[5] - Actif</div>";
+                        echo "<i class='fas fa-circle active'></i>Actif</div>";
                         } else {
-                           echo "<i class='fas fa-circle inactive'></i> $structureMods[5] - Inactif</div>";
+                           echo "<i class='fas fa-circle inactive'></i>Inactif</div>";
                         }
                         ?>
                     </li>
-
                 <?php
                 }
                 ?>

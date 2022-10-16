@@ -618,25 +618,51 @@ body .contents .section .modal.active {
   flex-direction: column;
   gap: 8px;
   align-items: center;
-  margin: 0 auto;
+}
+.module-details .list h3:not(:first-child) {
+  display: none;
+}
+.module-details .list h3 {
+  margin-bottom: 20px;
 }
 .module-details .list .list-item {
   width: 100%;
-  margin-bottom: 20px;
-  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 10px;
+  border: 1.5px solid #bdbdbd;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  background-color: #ffffff;
   cursor: pointer;
+}
+.module-details .list .list-item .name {
+  width: 100%;
+}
+.module-details .list .list-item .status {
+  min-width: max-content;
+  font-size: 1rem;
+}
+.module-details .list .list-item .status i {
+  padding-right: 8px;
+}
+.module-details .list .list-item .status .active {
+  color: #71d43c;
+}
+.module-details .list .list-item .status .inactive {
+  color: #ed3f3f;
 }
 
 @media screen and (min-width: 700px) {
-  .modules {
-    width: 80%;
+  .list {
+    width: 90%;
     margin: 0 auto;
   }
-  .modules .list-item:hover {
+  .list .list-item:hover {
     border: 1.5px solid #5fa8d3;
     transition: 0.3s;
   }
-  .modules .list-item:hover .name {
+  .list .list-item:hover .name {
     color: #5fa8d3;
     transition: 0.3s;
   }
